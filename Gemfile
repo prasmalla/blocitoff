@@ -38,8 +38,11 @@ end
 
 group :production do
   # heroku deploy
+  ruby "2.2.3"
   gem 'rails_12factor'
   gem 'rack-timeout'
+  gem 'newrelic_rpm'
 end
 
+gem 'figaro'
 gem 'puma'

@@ -7,5 +7,6 @@
 /tmp
 .DS_Store
 
-#secrets
-config/secrets.yml
+# heroku needs to see secrets.yml - use figaro instead
+# Ignore application configuration
+/config/application.yml
