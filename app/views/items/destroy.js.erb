@@ -1,0 +1,3 @@
+$('#todo-'+<%= @item.id %>).hide();
+$('.alert').remove();
+$('<%= j render partial: "shared/flash" %>').insertBefore('.user-info');
