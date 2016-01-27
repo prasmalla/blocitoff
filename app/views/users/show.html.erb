@@ -1,3 +1,16 @@
-<h4><%= @user.name %></h4>
-<h6><%= @user.email %></h6>
-<%= link_to 'Edit', edit_user_registration_path %>
+<div class="well well-lg">
+  <h4><%= @user.name %> <small><%= link_to 'Edit', edit_user_registration_path %></small></h4>
+  <h6><%= @user.email %></h6>
+</div>
+<%= render partial: 'items/form' %>
+<h2>this is what's up</h2>
+<table class="table table-condensed">
+  <tr>
+    <th>to be done</th>
+  </tr>
+  <% @items.each do |item| %>
+  <tr>
+    <%= render partial: 'items/item', locals: { item: item } %>
+  </tr>
+  <% end %>
+</table>
