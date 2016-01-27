@@ -1,0 +1,6 @@
+# deploy to heroku
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: prasmalla-blocitoff

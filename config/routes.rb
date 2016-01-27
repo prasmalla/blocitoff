@@ -10,8 +10,8 @@ Rails.application.routes.draw do
       root 'users#signup', as: :unauthenticated_root
     end
   end
-  
+
   resources :users, only: [:show] do
-    resources :items, only: [:create]
+    resources :items, only: [:create, :destroy]
   end
 end

@@ -6,11 +6,12 @@
 <h2>this is what's up</h2>
 <table class="table table-condensed">
   <tr>
-    <th>to be done</th>
+    <th>to be done..</th>
+    <th>is done?!</th>
   </tr>
   <% @items.each do |item| %>
-  <tr>
+    <%= content_tag :tr, id: "todo-#{item.id}" do %>
     <%= render partial: 'items/item', locals: { item: item } %>
-  </tr>
+    <% end %>
   <% end %>
 </table>
