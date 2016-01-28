@@ -23,7 +23,7 @@ users = User.all
 
 # to do items
 18.times do
-  todo = Item.create!(
+  Item.create!(
     name:   Faker::Hacker.say_something_smart,
     user:   users.sample
   )

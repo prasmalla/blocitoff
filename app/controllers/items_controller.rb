@@ -12,8 +12,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
-    return unless @item.user == current_user
+    @item = current_user.items.find(params[:id])
 
     if @item.delete
       flash.now[:notice] = "Bravo! task completed."
