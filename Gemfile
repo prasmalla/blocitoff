@@ -51,3 +51,4 @@ gem 'figaro'
 gem 'puma'
 
 gem 'devise'
+gem 'whenever', :require => false
